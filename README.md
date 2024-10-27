@@ -1,99 +1,109 @@
-# Walmart Sales Forecasting Project Overview
+# 🛒 Walmart Sales Forecasting Project
 
-![dataset-cover](https://github.com/user-attachments/assets/699b740d-03e9-42d9-a96c-91fe904d5321)
+![dataset-cover](https://github.com/user-attachments/assets/d7171710-d837-4d08-9b40-c1f890a10be6)
 
 
-This project aims to predict Walmart store sales across various seasons and holidays to help the company manage inventories, forecast revenue, and plan effective campaigns. Accurate forecasting will enable Walmart to make informed decisions on stock arrangements, revenue projections, and investment planning, which is especially crucial given the seasonal fluctuation in sales patterns.
-Problem Statement
+## 📋 Project Overview
+Walmart experiences significant seasonal fluctuations in sales. Predicting these peaks and troughs enables Walmart to manage inventories, forecast revenue, and strategically plan effective campaigns. This project builds a robust predictive model to help Walmart make data-driven decisions on stock arrangements, revenue projections, and investment planning.
 
-Walmart experiences significant fluctuations in sales due to seasonal effects. Failing to predict these seasonal peaks or troughs can lead to potential revenue loss and negatively impact stock prices. This project focuses on building predictive models to forecast weekly sales across Walmart stores, considering factors like holiday promotions, markdowns, CPI, temperature, fuel prices, and more.
-Project Objectives
+## 💡 Problem Statement
+Walmart faces considerable challenges with fluctuating sales, influenced by various seasonal events. Mismanaging these can lead to potential revenue loss and stock price impact. This project addresses the need for accurate forecasting to help Walmart optimize its supply chain and improve decision-making, particularly around seasonal sales.
 
-    Data Understanding and Cleaning
-        Identify missing values and handle them (imputation or removal).
-        Format date columns appropriately.
-        Explore relationships among markdowns, temperature, CPI, unemployment, and sales.
-        Detect and address outliers or data quality issues.
+---
 
-    Exploratory Data Analysis (EDA)
-        Identify seasonal sales patterns and trends.
-        Examine sales performance across stores, departments, and holidays.
-        Visualize the distribution of sales and analyze external factors affecting sales.
+## 🎯 Project Objectives
+### 1. **Data Understanding and Cleaning**
+   - Identify missing values and handle appropriately.
+   - Format date columns for consistency.
+   - Explore relationships among key variables such as temperature, CPI, and sales.
+   - Detect and address data quality issues.
 
-    Feature Engineering and Preparation for Modeling
-        Engineer features like lag variables, rolling averages, and holiday sales indicators.
-        Encode categorical variables (e.g., store type, holiday flags).
-        Scale continuous features for effective model training.
+### 2. **Exploratory Data Analysis (EDA)**
+   - Identify seasonal sales patterns and trends.
+   - Examine performance across stores, departments, and holidays.
+   - Visualize the distribution of sales and explore external influencing factors.
 
-    Model Development
-        Train machine learning models (Random Forest, ARIMA, Exponential Smoothing) to forecast sales.
-        Evaluate models using Weighted Mean Absolute Error (WMAE), emphasizing holiday-related sales accuracy.
+### 3. **Feature Engineering and Preparation for Modeling**
+   - Engineer lag variables, rolling averages, and holiday indicators.
+   - Encode categorical variables like store types and holiday flags.
+   - Scale continuous variables for optimized model training.
 
-    Findings and Interpretations
-        Identify top-performing stores and departments in seasonal periods.
-        Recommend strategies for inventory and stock management based on model predictions.
+### 4. **Model Development**
+   - Implement **Random Forest Regressor** and **ARIMA/Exponential Smoothing** for time-series forecasting.
+   - Evaluate model performance using Weighted Mean Absolute Error (WMAE).
 
-Data Description
+### 5. **Insights and Recommendations**
+   - Identify top-performing stores and departments.
+   - Offer actionable strategies for inventory and stock management.
 
-The dataset contains weekly sales data for various Walmart stores. Important columns include:
+---
 
-    Date: Date of the sales record.
-    Store and Department: Identifiers for each store and department.
-    Sales: Weekly sales figures for each department in each store.
-    IsHoliday: Indicates if the sales week includes a holiday.
-    Markdowns: Promotional markdowns applied.
-    CPI, Fuel_Price, Temperature, Unemployment: External economic factors.
+## 🧰 Data Description
+The dataset includes weekly sales data from Walmart, with fields such as:
 
-Model Selection
+| Column         | Description                                  |
+|----------------|----------------------------------------------|
+| **Date**       | Sales record date.                          |
+| **Store**      | Unique identifier for Walmart stores.       |
+| **Department** | Identifier for each department.             |
+| **Weekly Sales** | Weekly revenue for each department.       |
+| **IsHoliday**  | Indicates if the sales week includes a holiday. |
+| **Markdowns**  | Promotional discounts applied.              |
+| **CPI**        | Consumer Price Index for the area.          |
+| **Fuel Price** | Weekly fuel prices.                         |
+| **Temperature** | Temperature data.                          |
+| **Unemployment** | Unemployment rates.                       |
 
-Several models were explored in this project to account for Walmart's non-stationary, seasonal data:
+---
 
-    Random Forest Regressor: Selected features based on feature importance, achieving a Weighted Mean Absolute Error (WMAE) of approximately 1801.
-    ARIMA and Exponential Smoothing: Applied log transformations and shifting techniques to enhance stationarity. Exponential Smoothing achieved the lowest error of 821, making it suitable for trend forecasting.
+## 🧠 Model Selection
+1. **Random Forest Regressor**  
+   - Selected based on feature importance, achieving a WMAE of 1801.
 
-Key Findings
+2. **ARIMA and Exponential Smoothing**  
+   - Applied to stationary data (transformed by log and differencing) with Exponential Smoothing yielding the lowest error (821).
 
-    Seasonal Patterns: Sales peak during major holidays (Christmas, Thanksgiving, Black Friday), with lower sales in January due to reduced spending after holiday seasons.
-    Store and Department Variability: Sales vary significantly by store type (A, B, C), with larger stores generally experiencing higher seasonal sales.
-    Holiday Impact: The 51st week, aligning with pre-Christmas shopping, sees substantial sales, suggesting that holiday promotions should begin earlier.
-    External Factors: Economic indicators like CPI, temperature, and unemployment have minimal impact on weekly sales, though more data could refine these insights.
+---
 
-Future Improvements
+## 📊 Key Findings
+- **Seasonal Sales**: Sales peak around holidays like Christmas, Thanksgiving, and Black Friday.
+- **Store and Department Variability**: Sales vary significantly based on store types (A, B, C).
+- **Holiday Patterns**: Weeks preceding Christmas see the highest sales, with notable peaks in Thanksgiving and Black Friday weeks.
+- **Economic Indicators**: Minimal impact from external factors like CPI and temperature on weekly sales.
 
-    Refine stationarity techniques and introduce advanced feature engineering.
-    Incorporate additional holiday data to improve model sensitivity to special occasions.
-    Explore separate models for high-demand stores or departments.
-    Conduct a market basket analysis to determine department-wise demand trends.
+---
 
-Project Roadmap
+## 🚀 Future Improvements
+- Enhance stationarity techniques and expand feature engineering.
+- Incorporate more holidays and seasonal data.
+- Create specialized models for high-demand stores or departments.
+- Perform market basket analysis for better department-wise demand predictions.
 
-    Data Understanding and Cleaning
-        Address missing values and format dates.
-        Examine data relationships and clean for analysis.
+---
 
-    Exploratory Data Analysis (EDA)
-        Analyze seasonality and trends.
-        Visualize sales distribution and assess external factor impact.
+## 📅 Project Roadmap
+| Goal           | Objective                                      | Tasks                                                                                           |
+|----------------|------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Goal 1**     | Data Understanding and Cleaning                | Handle missing values, format dates, and explore relationships.                                |
+| **Goal 2**     | Exploratory Data Analysis (EDA)                | Visualize seasonal trends and analyze store/department performance.                             |
+| **Goal 3**     | Feature Engineering and Preparation            | Generate lag features, holiday indicators, and encode variables.                                |
+| **Goal 4**     | Modeling and Evaluation                        | Train models and optimize using Weighted Mean Absolute Error (WMAE).                            |
+| **Goal 5**     | Insights and Recommendations                   | Identify top performers and suggest inventory strategies.                                       |
 
-    Feature Engineering and Preparation
-        Engineer time-lag features, holiday indicators, and seasonal trends.
-        Encode and scale relevant features.
+---
 
-    Modeling and Evaluation
-        Train and evaluate machine learning models.
-        Optimize using Weighted Mean Absolute Error (WMAE).
+## 📂 Repository Structure
+- **`features.csv`**: Engineered features for model training.
+- **`stores.csv`**: Store-specific information.
+- **`train.csv`**: Training dataset for model building.
+- **`test.csv`**: Testing dataset for evaluating model performance.
+- **`Walmart_Sales_Forecasting.ipynb`**: Jupyter Notebook containing full analysis, model development, and evaluation.
+- **`Roadmap.docx`** & **`problem.docx`**: Documentation for project goals, methodology, and problem context.
 
-    Insights and Recommendations
-        Provide actionable findings for inventory management and campaign planning.
+---
 
-Repository Structure
+## 📝 Conclusion
+This project demonstrates an end-to-end data science approach to sales forecasting, utilizing machine learning and time-series analysis to support Walmart’s operational and strategic decision-making. Accurate predictions enable Walmart to improve inventory management, reduce stockouts, optimize promotions, and enhance customer satisfaction.
 
-    features.csv: Engineered feature set for model training.
-    stores.csv: Store-related data, including type and location.
-    train.csv and test.csv: Training and testing datasets for model evaluation.
-    Walmart_Sales_Forecasting.ipynb: Jupyter Notebook containing the full analysis, model development, and evaluation.
-    Roadmap.docx and problem.docx: Documentation outlining project goals, methodology, and problem context.
-
-Conclusion
-
-The project demonstrates an end-to-end data science approach for sales forecasting, utilizing machine learning and time-series analysis to support Walmart's operational and strategic decision-making. By accurately predicting sales, Walmart can better manage inventory, reduce stockouts, optimize promotions, and enhance overall customer satisfaction.
+## 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
