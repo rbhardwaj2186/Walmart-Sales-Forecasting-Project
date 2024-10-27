@@ -1,5 +1,8 @@
 # Walmart Sales Forecasting Project Overview
 
+![dataset-cover](https://github.com/user-attachments/assets/699b740d-03e9-42d9-a96c-91fe904d5321)
+
+
 This project aims to predict Walmart store sales across various seasons and holidays to help the company manage inventories, forecast revenue, and plan effective campaigns. Accurate forecasting will enable Walmart to make informed decisions on stock arrangements, revenue projections, and investment planning, which is especially crucial given the seasonal fluctuation in sales patterns.
 Problem Statement
 
