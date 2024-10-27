@@ -106,4 +106,4 @@ The dataset includes weekly sales data from Walmart, with fields such as:
 This project demonstrates an end-to-end data science approach to sales forecasting, utilizing machine learning and time-series analysis to support Walmart’s operational and strategic decision-making. Accurate predictions enable Walmart to improve inventory management, reduce stockouts, optimize promotions, and enhance customer satisfaction.
 
 ## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is Privately created. Owner: rbhardwaj2186@gmail.com. Feel free to study, use and update and enjoy!
